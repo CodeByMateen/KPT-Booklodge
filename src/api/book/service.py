@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException
-from .models import Book
-from .schemas import BookSchema
+from src.api.book.model import Book
+from .schema import BookSchema
 
 class BookService:
     @staticmethod

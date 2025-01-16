@@ -13,7 +13,8 @@ app.include_router(book_router)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    print("---------------------Hello World---------------------")
+    return {"message": "Hello World"}
 
 # Create the database tables
 Base.metadata.create_all(bind=engine)

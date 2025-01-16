@@ -1,15 +1,15 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from src.database import get_db
-from .schemas import BookSchema
-from .services import book_service
+from .schema import BookSchema
+from .service import book_service
 
 router = APIRouter(
-    prefix="/books",
-    tags=["books"]
+    prefix="/api/v1/book",
+    tags=["Book API Endpoints"]
 )
 
-@router.post("/", response_model=BookSchema)
+@router.post("", response_model=BookSchema)
 def create_book(book: BookSchema, db: Session = Depends(get_db)):
     return book_service.create_book(db=db, book=book)
 
