@@ -8,13 +8,13 @@ app = FastAPI(
     version="1.0"
 )
 
-# Include book routes
-app.include_router(book_router)
-
 @app.get("/")
 def read_root():
     print("---------------------Hello World---------------------")
     return {"message": "Hello World"}
+
+# Include book routes
+app.include_router(book_router)
 
 # Create the database tables
 Base.metadata.create_all(bind=engine)
