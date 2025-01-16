@@ -3,14 +3,14 @@
 python -m venv venv
 ```
 
-## command to activate virtual environment
+## command to activate virtual environment in windows
 ```
 venv\Scripts\activate
 ```
 
-## For Linux
+## command to activate virtual environment in bash
 ```bash
-source venv/Scripts/activate
+source venv/scripts/activate
 ```
 
 ## To check python in virtual environment
