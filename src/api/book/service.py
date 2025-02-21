@@ -1,4 +1,4 @@
-from sqlalchemy.orm import Session 
+from sqlalchemy.orm import Session
 from fastapi import HTTPException
 from src.api.book.model import Book
 from .schema import BookSchema
